@@ -1,0 +1,42 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "newStorageAccountName": {
+            "value": "protectedstorage1"
+        },
+        "location": {
+            "value": "Southeast Asia"
+        },
+        "publicIPName": {
+            "value": "protected-ip1"
+        },
+        "publicIPAddressType": {
+            "value": "Dynamic"
+        },
+        "vmName": {
+            "value": "vm-protected-1"
+        },
+        "vmSize": {
+            "value": "Standard_A2"
+        },
+        "adminUserName": {
+            "value": "protectedadmin"
+        },
+        "adminPassword": {
+            "value": "4fredgsy6!R"
+        },
+        "virtualNetworkName": {
+            "value": "protected-vnet1"
+        },
+        "virtualNetworkResourceGroup": {
+            "value": "demo-protected-rg"
+        },
+        "subnet1Name": {
+            "value": "subnet2Name"
+        },
+        "nicName": {
+            "value": "protected-nic-1"
+        }
+    }
+}
