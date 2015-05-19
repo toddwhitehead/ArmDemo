@@ -29,23 +29,7 @@
             "metadata": {
                 "description": "Type of storage account"
             }
-        },
-        "publicIPName": {
-            "type": "string",
-            "metadata": {
-                "description": "Name of Public IP"
-            }
-        },
-        "publicIPAddressType": {
-            "type": "string",
-            "defaultValue": "Dynamic",
-            "allowedValues": [
-                "Dynamic"
-            ],
-            "metadata": {
-                "description": "Type of Public Address"
-            }
-        },
+        },                
         "vmName": {
             "type": "string",
             "metadata": {
@@ -136,30 +120,17 @@
         "properties": {
             "accountType": "[parameters('storageAccountType')]"
         }
-    }, {
-        "apiVersion": "2015-05-01-preview",
-        "type": "Microsoft.Network/publicIPAddresses",
-        "name": "[parameters('publicIPName')]",
-        "location": "[parameters('location')]",
-        "properties": {
-            "publicIPAllocationMethod": "[parameters('publicIPAddressType')]"
-        }
-    }, {
+    }, 
+	{
         "apiVersion": "2015-05-01-preview",
         "type": "Microsoft.Network/networkInterfaces",
         "name": "[parameters('nicName')]",
         "location": "[parameters('location')]",
-        "dependsOn": [
-            "[concat('Microsoft.Network/publicIPAddresses/', parameters('publicIPName'))]"
-        ],
         "properties": {
             "ipConfigurations": [{
                 "name": "ipconfig1",
                 "properties": {
                     "privateIPAllocationMethod": "Dynamic",
-                    "publicIPAddress": {
-                        "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPName'))]"
-                    },
                     "subnet": {
                         "id": "[variables('subnet1Ref')]"
                     }
