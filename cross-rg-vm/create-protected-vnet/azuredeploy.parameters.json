@@ -2,6 +2,9 @@
   "location": {
       "value": "Southeast Asia"
   },
+    "vnetName": {
+      "value": "protected-dev-vnet"
+  },
   "addressPrefix": {
       "value": "10.0.0.0/16"
   },

@@ -1,0 +1,36 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "newStorageAccountName": {
+            "value": "devprotectedstorage1"
+        },
+        "location": {
+            "value": "Southeast Asia"
+        },
+        "vmName": {
+            "value": "vm-protected-1"
+        },
+        "vmSize": {
+            "value": "Standard_A2"
+        },
+        "adminUserName": {
+            "value": "protectedadmin"
+        },
+        "adminPassword": {
+            "value": "4fredgsy6!R"
+        },
+        "virtualNetworkName": {
+            "value": "protected-dev-vnet"
+        },
+        "virtualNetworkResourceGroup": {
+            "value": "protected-dev-rg"
+        },
+        "subnet1Name": {
+            "value": "subnet1"
+        },
+        "nicName": {
+            "value": "protected-nic-1"
+        }
+    }
+}

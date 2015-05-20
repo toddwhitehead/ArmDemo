@@ -3,13 +3,19 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "newStorageAccountName": {
-            "value": "protectedstorageacct"
+            "value": "protectedstorage1"
         },
         "location": {
             "value": "Southeast Asia"
         },
-       "vmName": {
-            "value": "vm-ops1-1"
+        "publicIPName": {
+            "value": "protected-ip1"
+        },
+        "publicIPAddressType": {
+            "value": "Dynamic"
+        },
+        "vmName": {
+            "value": "vm-protected-1"
         },
         "vmSize": {
             "value": "Standard_A2"
@@ -21,10 +27,10 @@
             "value": "4fredgsy6!R"
         },
         "virtualNetworkName": {
-            "value": "protected-ops-vnet1"
+            "value": "protected-vnet1"
         },
         "virtualNetworkResourceGroup": {
-            "value": "demo-protectedops-rg"
+            "value": "demo-protected-rg"
         },
         "subnet1Name": {
             "value": "subnet2Name"
