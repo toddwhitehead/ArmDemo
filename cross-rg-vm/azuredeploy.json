@@ -29,7 +29,7 @@
             "metadata": {
                 "description": "Type of storage account"
             }
-        },
+        },                
         "vmName": {
             "type": "string",
             "metadata": {
