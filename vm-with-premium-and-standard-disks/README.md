@@ -9,3 +9,5 @@
 
 This template allows you to deploy a Premium Windows VM using a few different options for the Windows version, using the latest patched version.
 github.com/toddwhitehead/ArmDemo/tree/master/vm-with-premium-and-standard-disks
+
+Note: the two data disks will not yet have been initialised or formated. This can be done by remoting to the vm and following the usual disk initialise process (see <ahref="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-attach-disk-portal">https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-attach-disk-portal</a>) or installing DSC and using powershell commands.
