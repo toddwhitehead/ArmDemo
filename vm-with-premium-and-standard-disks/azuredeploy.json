@@ -58,8 +58,8 @@
     "virtualNetworkName": "MyVNET",
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]",
-    "stdStorageAccountName": "[concat(parameters('newStorageAccountName'),'-std')]",
-    "premStorageAccountName": "[concat(parameters('newStorageAccountName'),'-prem')]",
+    "stdStorageAccountName": "[concat(parameters('newStorageAccountName'),'std')]",
+    "premStorageAccountName": "[concat(parameters('newStorageAccountName'),'prem')]",
     "apiVersion": "2015-06-15",
     "sizeOfEachDataDiskInGB": "128"
   },
