@@ -60,8 +60,7 @@
     "subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]",
     "stdStorageAccountName": "[concat(parameters('newStorageAccountName'),'std')]",
     "premStorageAccountName": "[concat(parameters('newStorageAccountName'),'prem')]",
-    "apiVersion": "2015-06-15",
-    "sizeOfEachDataDiskInGB": "128"
+    "apiVersion": "2015-06-15"
   },
   "resources": [
     {
@@ -170,7 +169,7 @@
           "dataDisks": [
             {
               "name": "premiumdatadisk",
-              "diskSizeGB": "[variables('sizeOfEachDataDiskInGB')]",
+              "diskSizeGB": "128",
               "lun": 0,
               "vhd": {
                 "uri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('premStorageAccountName')), variables('apiVersion')).primaryEndpoints.blob, variables('vmStorageAccountContainerName'),'/',variables('vmName'),'dataDisk1.vhd')]"
@@ -179,7 +178,7 @@
             },
             {
               "name": "stddatadisk",
-              "diskSizeGB": "[variables('sizeOfEachDataDiskInGB')]",
+              "diskSizeGB": "100",
               "lun": 1,
               "vhd": {
                 "uri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('stdStorageAccountName')), variables('apiVersion')).primaryEndpoints.blob, variables('vmStorageAccountContainerName'),'/',variables('vmName'),'dataDisk2.vhd')]"
