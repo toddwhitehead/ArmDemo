@@ -1,0 +1,7 @@
+{
+  "itemDisplayName": "Deploy a Windows VM with both a standard and premium storage data disk",
+  "description": "This template allows you to deploy a Premium Windows VM using a few different options for the Windows version, using the latest patched version.",
+  "summary": "This template takes a minimum amount of parameters and deploys a Premium Windows VM, using the latest patched version.",
+  "githubUsername": "toddwhitehead",
+  "dateUpdated": "2016-07-07"
+}
